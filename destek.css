@@ -1,0 +1,27 @@
+.destek-default {
+    width: 500px;
+    background-color: #ccc;
+}
+.destek-steps{
+	height: 40px;
+	line-height: 40px;
+}
+
+.destek-step-label{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+
+.destek-step-label.destek-step-active a{
+	color: #f00;
+}
+
+.destek-step-content{
+	width: 100%;
+	display: none;
+}
+
+.destek-step-content.destek-step-active{
+	display: block;
+}
