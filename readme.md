@@ -50,7 +50,7 @@ O *destek* contém um evento que é dado assim que o botão de fechar é clicado
 Todas as funções e variáveis globais do destek estão contidas no objeto ``` destekData ```
 O objeto é dividido em quatro métodos:
 
-| Método      | Tipo         | Informação                                               |
+| **Método**      | **Tipo**         | **Informação**                                               |
 |-------------|--------------|----------------------------------------------------------|
 | *step*      | ```Objeto``` | Esse objeto contém as funções das abas do formulário     |
 | *mask*      | ```Função``` | Essa Função Gera as mascaras dos campos de texto         |
@@ -61,20 +61,20 @@ O objeto é dividido em quatro métodos:
 ## Objeto STEP ##
 O objeto step contém três funções para facilitar a navegação entre as abas,
 
-| Função     | Informação                                                                                   |
+| **Função**     | **Informação**                                                                                   |
 |------------|----------------------------------------------------------------------------------------------|
-| *set*      | Essa função seleciona a aba atual, nela você pode navegar para qualquer aba indicando o alvo |
-| *next*     | Essa função seleciona a próxima aba com base na atual                                        |
-| *previous* | Essa função seleciona a aba anterior com base na atual                                       |
+| **set**      | Essa função seleciona a aba atual, nela você pode navegar para qualquer aba indicando o alvo |
+| **next**     | Essa função seleciona a próxima aba com base na atual                                        |
+| **previous** | Essa função seleciona a aba anterior com base na atual                                       |
 
 ## função MASK ##
-Essa função é uma extenção da biblioteca *Jquery.Mask* ela mascara todos os campos disponíveis e mascaráveis.
+Essa função é uma extenção da biblioteca **Jquery.Mask** ela mascara todos os campos disponíveis e mascaráveis.
 Ex.: ``` CPF ```, ``` CEP ```, ``` Telefone ```
 
 ## Objeto EVENT ##
 Esse objeto, contém funções que podem ser utilizadas para manipular o destek
 
-| *Função*       | *Informação*                                                                 |
+| **Função**       | **Informação**                                                                 |
 |----------------|------------------------------------------------------------------------------|
 | ```validate``` | Essa função Valida os campo assim que chamado                                |
 | ```dispatch``` | Essa função lança um evento assim que o formulário é finalizado com sucesso. |
