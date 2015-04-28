@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Forms Destek</title>
-	<link rel="stylesheet" href="destek.css">
-</head>
-<body>
-		
-	<div class="form"></div>
 
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="destek-form.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Destek</title>
+    <link rel="stylesheet" href="destek.min.css">
+</head>
+
+<body>
+    <div class="form"></div>
+    <script src="jquery.min.js"></script>
+    <script src="destek-form.min.js"></script>
+    <script>
+    $(function() {
+        $(document).ready(function() {
+            $(".form").destek().init({
+                fields: ["name", "code", "email", "phone", "company", "job", "schooling", "course", "zip", "street", "number", "complement", "neighborhood", "city", "state"],
+            });
+
+            document.addEventListener("destek-close-form", function(e) {
+                alert("ready to close");
+            })
+        });
+    });
+    </script>
 </body>
+
 </html>
