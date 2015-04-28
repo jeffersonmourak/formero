@@ -82,6 +82,7 @@ Esse objeto, contém funções que podem ser utilizadas para manipular o destek
 
 
 ## Objeto VALIDATOR ##
-Esse é um objeto privado que valida os dados dos formulários, ele contém dois tipos de validação.
+Esse é um objeto privado que valida os dados dos formulários, ele contém dois tipos de validação
+
 * Dados - que valida os dados digitados nos campos
 * UI    - que valida o DOM montando os feedbacks
