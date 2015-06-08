@@ -1,4 +1,4 @@
-# FORMERO FORM GENERATOR V1.0#
+# FORMERO FORM GENERATOR V0.5#
 
 É uma biblioteca Jquery para o desenvolvimento dos fomulário das inscrições
 
