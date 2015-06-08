@@ -36,7 +36,6 @@ O *formero* contém um evento que é dado assim que o botão de fechar é clicad
 
 ### Como usar ###
 ```
-#!javascript
 
 	document.addEventListener("formero-close-form", function(e) {
         //Seu código aqui
