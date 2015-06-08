@@ -1,15 +1,14 @@
-# DESTEK FORM GENERATOR V1.0#
+# FORMERO FORM GENERATOR V1.0#
 
 É uma biblioteca Jquery para o desenvolvimento dos fomulário das inscrições
 
 ## A Função ##
 
-O Destek tem uma função chamada Init, nela deve conter os campos nos que serão enviados ao servidor
+O Formero tem uma função chamada Init, nela deve conter os campos nos que serão enviados ao servidor
 Ex.:
 ```
-#!javascript
 
-	$(seletor).destek().init({
+	$(seletor).formero().init({
 	    fields: ["campos","do","formulário"],
 	});
 
@@ -33,13 +32,13 @@ Os campos que podem ser usados
 * ```state```
 
 ## O EVENTO ##
-O *destek* contém um evento que é dado assim que o botão de fechar é clicado, esse evento tem como objetivo comunicar à página que o fomulário foi finalizado.
+O *formero* contém um evento que é dado assim que o botão de fechar é clicado, esse evento tem como objetivo comunicar à página que o fomulário foi finalizado.
 
 ### Como usar ###
 ```
 #!javascript
 
-	document.addEventListener("destek-close-form", function(e) {
+	document.addEventListener("formero-close-form", function(e) {
         //Seu código aqui
     })
 
@@ -47,15 +46,15 @@ O *destek* contém um evento que é dado assim que o botão de fechar é clicado
 
 ## Funções e dados Globais ##
 
-Todas as funções e variáveis globais do destek estão contidas no objeto ``` destekData ```
+Todas as funções e variáveis globais do formero estão contidas no objeto ``` formeroData ```
 O objeto é dividido em quatro métodos:
 
 | **Método**      | **Tipo**         | **Informação**                                               |
-|-------------|--------------|----------------------------------------------------------|
-| *step*      | ```Objeto``` | Esse objeto contém as funções das abas do formulário     |
-| *mask*      | ```Função``` | Essa Função Gera as mascaras dos campos de texto         |
-| *variables* | ```Objeto``` | Esse Objeto contém os valores padrões públicos do destek |
-| *events*    | ```Objeto``` | Esse Objeto contém as funções de evento do destek        |
+|-------------|--------------|-----------------------------------------------------------|
+| *step*      | ```Objeto``` | Esse objeto contém as funções das abas do formulário      |
+| *mask*      | ```Função``` | Essa Função Gera as mascaras dos campos de texto          |
+| *variables* | ```Objeto``` | Esse Objeto contém os valores padrões públicos do formero |
+| *events*    | ```Objeto``` | Esse Objeto contém as funções de evento do formero        |
 
 
 ## Objeto STEP ##
@@ -72,7 +71,7 @@ Essa função é uma extenção da biblioteca **Jquery.Mask** ela mascara todos 
 Ex.: ``` CPF ```, ``` CEP ```, ``` Telefone ```
 
 ## Objeto EVENT ##
-Esse objeto, contém funções que podem ser utilizadas para manipular o destek
+Esse objeto, contém funções que podem ser utilizadas para manipular o formero
 
 | **Função**       | **Informação**                                                                 |
 |----------------|------------------------------------------------------------------------------|

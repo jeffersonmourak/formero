@@ -487,13 +487,13 @@
 
 // End Jquery Mask Plugin
 
-// Start Destek Form Generator
+// Start formero Form Generator
 
 (function($) {
 
-    $.fn.destek = function() {
+    $.fn.formero = function() {
         var self = this;
-        window.destekElement = self;
+        window.formeroElement = self;
 
         function _generateFields(type, fields) {
             var names = {
@@ -539,19 +539,19 @@
                     if (type == "personal") {
                         var grid = document.createElement("div");
 
-                        grid.className = "destek-grid";
+                        grid.className = "formero-grid";
 
                         var input = document.createElement("input");
                         var label = document.createElement("label");
                         var text = document.createElement("span");
 
-                        text.className = "destek-field-label";
+                        text.className = "formero-field-label";
                         text.innerHTML = labels[field];
 
 
                         input.name = names[field];
                         input.type = "text";
-                        input.className = "destek-field";
+                        input.className = "formero-field";
                         input.id = names[field];
                         label.appendChild(text);
                         label.appendChild(input);
@@ -564,19 +564,19 @@
                     if (type == "profissional") {
                         var grid = document.createElement("div");
 
-                        grid.className = "destek-grid";
+                        grid.className = "formero-grid";
 
                         var input = document.createElement("input");
                         var label = document.createElement("label");
                         var text = document.createElement("span");
 
-                        text.className = "destek-field-label";
+                        text.className = "formero-field-label";
                         text.innerHTML = labels[field];
 
 
                         input.name = names[field];
                         input.type = "text";
-                        input.className = "destek-field";
+                        input.className = "formero-field";
                         input.id = names[field];
                         label.appendChild(text);
                         label.appendChild(input);
@@ -589,19 +589,19 @@
                     if (type == "address") {
                         var grid = document.createElement("div");
 
-                        grid.className = "destek-grid";
+                        grid.className = "formero-grid";
 
                         var input = document.createElement("input");
                         var label = document.createElement("label");
                         var text = document.createElement("span");
 
-                        text.className = "destek-field-label";
+                        text.className = "formero-field-label";
                         text.innerHTML = labels[field];
 
 
                         input.name = names[field];
                         input.type = "text";
-                        input.className = "destek-field";
+                        input.className = "formero-field";
                         input.id = names[field];
                         label.appendChild(text);
                         label.appendChild(input);
@@ -623,29 +623,29 @@
                 options.fields = [];
             }
 
-            var destekMainDiv = document.createElement("div");
-            var destekStepsDiv = document.createElement("div");
-            var destekContentDiv = document.createElement("div");
+            var formeroMainDiv = document.createElement("div");
+            var formeroStepsDiv = document.createElement("div");
+            var formeroContentDiv = document.createElement("div");
 
 
-            destekMainDiv.className = "destek-default";
-            destekStepsDiv.className = "destek-steps";
-            destekContentDiv.className = "destek-content";
+            formeroMainDiv.className = "formero-default";
+            formeroStepsDiv.className = "formero-steps";
+            formeroContentDiv.className = "formero-content";
 
             var labelsText = ["Dados Pessoais", "Dados Profissionais", "Dados de Endereço"];
 
             for (var i = 0; i < 3; i++) {
                 var stepLabel = document.createElement("div");
                 var stepContent = document.createElement("div");
-                stepContent.id = "destek-step-" + (i + 1);
+                stepContent.id = "formero-step-" + (i + 1);
 
                 if (i === 0) {
-                    stepLabel.className = "destek-step-label destek-step-active";
-                    stepContent.className = "destek-step-content destek-step-active";
+                    stepLabel.className = "formero-step-label formero-step-active";
+                    stepContent.className = "formero-step-content formero-step-active";
 
                 } else {
-                    stepLabel.className = "destek-step-label";
-                    stepContent.className = "destek-step-content";
+                    stepLabel.className = "formero-step-label";
+                    stepContent.className = "formero-step-content";
 
                 }
 
@@ -653,18 +653,18 @@
                     stepContent.appendChild(_generateFields("personal", options.fields));
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-previous";
+                    grid.className = "formero-grid formero-footer formero-previous";
 
                     stepContent.appendChild(grid);
 
                     var buttonNext = document.createElement("button");
-                    buttonNext.className = "destek-button destek-next";
+                    buttonNext.className = "formero-button formero-next";
                     buttonNext.innerHTML = "Próximo";
 
-                    buttonNext.addEventListener("click", destekData.step.next);
+                    buttonNext.addEventListener("click", formeroData.step.next);
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-next";
+                    grid.className = "formero-grid formero-footer formero-next";
 
                     grid.appendChild(buttonNext);
                     stepContent.appendChild(grid);
@@ -674,26 +674,26 @@
                     stepContent.appendChild(_generateFields("profissional", options.fields));
 
                     var buttonPrevious = document.createElement("button");
-                    buttonPrevious.className = "destek-button destek-previous";
+                    buttonPrevious.className = "formero-button formero-previous";
                     buttonPrevious.innerHTML = "Anterior";
-                    buttonPrevious.addEventListener("click", destekData.step.previous);
+                    buttonPrevious.addEventListener("click", formeroData.step.previous);
 
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-previous";
+                    grid.className = "formero-grid formero-footer formero-previous";
 
                     grid.appendChild(buttonPrevious);
                     stepContent.appendChild(grid);
 
                     var buttonNext = document.createElement("button");
-                    buttonNext.className = "destek-button destek-next";
+                    buttonNext.className = "formero-button formero-next";
                     buttonNext.innerHTML = "Próximo";
-                    buttonNext.addEventListener("click", destekData.step.next);
+                    buttonNext.addEventListener("click", formeroData.step.next);
 
 
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-next";
+                    grid.className = "formero-grid formero-footer formero-next";
 
                     grid.appendChild(buttonNext);
                     stepContent.appendChild(grid);
@@ -704,80 +704,80 @@
 
 
                     var buttonPrevious = document.createElement("button");
-                    buttonPrevious.className = "destek-button destek-previous";
+                    buttonPrevious.className = "formero-button formero-previous";
                     buttonPrevious.innerHTML = "Anterior";
-                    buttonPrevious.addEventListener("click", destekData.step.previous);
+                    buttonPrevious.addEventListener("click", formeroData.step.previous);
 
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-previous";
+                    grid.className = "formero-grid formero-footer formero-previous";
 
                     grid.appendChild(buttonPrevious);
                     stepContent.appendChild(grid);
 
                     var buttonSuccess = document.createElement("button");
-                    buttonSuccess.className = "destek-button destek-success";
+                    buttonSuccess.className = "formero-button formero-success";
                     buttonSuccess.innerHTML = "Finalizar";
-                    buttonSuccess.addEventListener("click", destekData.events.submit);
+                    buttonSuccess.addEventListener("click", formeroData.events.submit);
 
 
 
                     var grid = document.createElement("div");
-                    grid.className = "destek-grid destek-footer destek-next";
+                    grid.className = "formero-grid formero-footer formero-next";
 
                     grid.appendChild(buttonSuccess);
                     stepContent.appendChild(grid);
                 }
 
-                stepLabel.innerHTML = "<a class=\"destek-step-link\" data-target=\"destek-step-" + (i + 1) + "\" href=\"#\">" + labelsText[i] + "</a>";
+                stepLabel.innerHTML = "<a class=\"formero-step-link\" data-target=\"formero-step-" + (i + 1) + "\" href=\"#\">" + labelsText[i] + "</a>";
 
-                destekStepsDiv.appendChild(stepLabel);
-                destekContentDiv.appendChild(stepContent);
+                formeroStepsDiv.appendChild(stepLabel);
+                formeroContentDiv.appendChild(stepContent);
 
             }
 
             var goodByeDiv = document.createElement("div");
 
-            goodByeDiv.id = "destek-goodbye";
-            goodByeDiv.className = "destek-step-content";
-            goodByeDiv.innerHTML = "<h3 id=\"destek-goodbye-text\">TEXTO</h3>";
+            goodByeDiv.id = "formero-goodbye";
+            goodByeDiv.className = "formero-step-content";
+            goodByeDiv.innerHTML = "<h3 id=\"formero-goodbye-text\">TEXTO</h3>";
 
             var buttonSuccess = document.createElement("button");
-            buttonSuccess.id = "destek-close-form";
-            buttonSuccess.className = "destek-button destek-success";
+            buttonSuccess.id = "formero-close-form";
+            buttonSuccess.className = "formero-button formero-success";
             buttonSuccess.innerHTML = "Fechar";
-            buttonSuccess.addEventListener("click", destekData.events.dispatch);
+            buttonSuccess.addEventListener("click", formeroData.events.dispatch);
 
             goodByeDiv.appendChild(buttonSuccess);
 
             var buttonError = document.createElement("button");
-            buttonError.id = "destek-back-form";
-            buttonError.className = "destek-button destek-error";
+            buttonError.id = "formero-back-form";
+            buttonError.className = "formero-button formero-error";
             buttonError.innerHTML = "Voltar";
 
             buttonError.addEventListener("click", function() {
-                destekData.step.set("destek-step-3");
+                formeroData.step.set("formero-step-3");
             });
 
             goodByeDiv.appendChild(buttonError);
 
-            destekContentDiv.appendChild(goodByeDiv);
+            formeroContentDiv.appendChild(goodByeDiv);
 
-            destekMainDiv.appendChild(destekStepsDiv);
-            destekMainDiv.appendChild(destekContentDiv);
+            formeroMainDiv.appendChild(formeroStepsDiv);
+            formeroMainDiv.appendChild(formeroContentDiv);
 
 
-            self[0].appendChild(destekMainDiv);
+            self[0].appendChild(formeroMainDiv);
 
-            destekData.mask();
+            formeroData.mask();
 
-            $(".destek-step-link").click(function() {
+            $(".formero-step-link").click(function() {
                 var target = $(this).data("target");
-                destekData.step.set(target);
+                formeroData.step.set(target);
             });
 
-            $(".destek-field").blur(function() {
-                destekData.events.validate(this.id);
+            $(".formero-field").blur(function() {
+                formeroData.events.validate(this.id);
             });
 
         }
@@ -793,7 +793,7 @@
 
 
 
-function DestekValidator() {
+function FormeroValidator() {
 
     this.cpf = function(value) {
         var codeString = value.replace("-", "").replace(".", "").replace(".", "");
@@ -954,37 +954,37 @@ function DestekValidator() {
     var self = this;
 }
 
-var validator = new DestekValidator();
+var validator = new FormeroValidator();
 
-var destekData = {
+var formeroData = {
     step: {
         current: 0,
         set: function(target) {
-            $(".destek-step-content").each(function() {
+            $(".formero-step-content").each(function() {
                 var selectedClass = $(this).attr("class");
-                if (selectedClass.indexOf("destek-step-active") != -1) {
-                    $(this).removeClass("destek-step-active");
+                if (selectedClass.indexOf("formero-step-active") != -1) {
+                    $(this).removeClass("formero-step-active");
                 }
             });
-            $(".destek-step-label").each(function() {
+            $(".formero-step-label").each(function() {
                 var selectedClass = $(this).attr("class");
-                if (selectedClass.indexOf("destek-step-active") != -1) {
-                    $(this).removeClass("destek-step-active");
+                if (selectedClass.indexOf("formero-step-active") != -1) {
+                    $(this).removeClass("formero-step-active");
                 }
                 if ($(this).children("a").data("target") == target) {
-                    destekData.step.current = parseInt(target.replace("destek-step-", "")) - 1;
-                    $(this).addClass("destek-step-active");
-                    $("#" + target).addClass("destek-step-active");
+                    formeroData.step.current = parseInt(target.replace("formero-step-", "")) - 1;
+                    $(this).addClass("formero-step-active");
+                    $("#" + target).addClass("formero-step-active");
                 }
             });
         },
         next: function() {
-            var realStep = destekData.step.current + 1;
-            destekData.step.set("destek-step-" + (realStep + 1));
+            var realStep = formeroData.step.current + 1;
+            formeroData.step.set("formero-step-" + (realStep + 1));
         },
         previous: function() {
-            var realStep = destekData.step.current + 1;
-            destekData.step.set("destek-step-" + (realStep - 1));
+            var realStep = formeroData.step.current + 1;
+            formeroData.step.set("formero-step-" + (realStep - 1));
         }
     },
     mask: function() {
@@ -1031,7 +1031,7 @@ var destekData = {
         },
         dispatch: function() {
 
-            var event = new Event('destek-close-form');
+            var event = new Event('formero-close-form');
 
             document.dispatchEvent(event);
 
@@ -1041,7 +1041,7 @@ var destekData = {
 
             var postData = {};
 
-            $(".destek-field").each(function() {
+            $(".formero-field").each(function() {
                 postData[this.id] = this.value;
             });
 
@@ -1049,21 +1049,21 @@ var destekData = {
 
             $.ajax({
                 method: "POST",
-                url: "destek.php",
+                url: "formero.php",
                 data: postData
             }).done(function() {
-                destekData.step.set(3);
-                $("#destek-goodbye").addClass("destek-step-active");
-                $("#destek-goodbye-text").addClass("valid").html("Inscrito com sucesso");
-                $("#destek-close-form").css("display", "inline");
-                $("#destek-back-form").css("display", "none");
+                formeroData.step.set(3);
+                $("#formero-goodbye").addClass("formero-step-active");
+                $("#formero-goodbye-text").addClass("valid").html("Inscrito com sucesso");
+                $("#formero-close-form").css("display", "inline");
+                $("#formero-back-form").css("display", "none");
 
             }).error(function() {
-                destekData.step.set(3);
-                $("#destek-goodbye").addClass("destek-step-active");
-                $("#destek-goodbye-text").addClass("invalid").html("Erro ao inscrever");
-                $("#destek-back-form").css("display", "inline");
-                $("#destek-close-form").css("display", "none");
+                formeroData.step.set(3);
+                $("#formero-goodbye").addClass("formero-step-active");
+                $("#formero-goodbye-text").addClass("invalid").html("Erro ao inscrever");
+                $("#formero-back-form").css("display", "inline");
+                $("#formero-close-form").css("display", "none");
             });
         }
     }

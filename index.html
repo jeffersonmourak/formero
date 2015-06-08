@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Forms Destek</title>
-    <link rel="stylesheet" href="destek.min.css">
+    <link rel="stylesheet" href="formero.css">
 </head>
 
 <body>
     <div class="form"></div>
     <script src="jquery.min.js"></script>
-    <script src="destek-form.min.js"></script>
+    <script src="formero.js"></script>
     <script>
     $(function() {
         $(document).ready(function() {
-            $(".form").destek().init({
+            $(".form").formero().init({
                 fields: ["name", "code", "email", "phone", "company", "job", "schooling", "course", "zip", "street", "number", "complement", "neighborhood", "city", "state"],
             });
 
